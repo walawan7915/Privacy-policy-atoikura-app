@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="「あといくら？」Atoikura iPhoneアプリのプライバシーポリシー。日本語、繁體中文、English。">
+  <meta name="theme-color" content="#f5efe4">
+  <title>プライバシーポリシー | Atoikura</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #352922;
+      --muted: #71665d;
+      --paper: #f5efe4;
+      --card: #fffdf8;
+      --line: #e7dac8;
+      --accent: #a9634b;
+      --accent-dark: #814b38;
+      --sage: #74816b;
+      --shadow: 0 22px 58px rgb(80 54 39 / 9%);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(ellipse at 6% 4%, rgb(232 190 163 / 35%), transparent 35rem),
+        radial-gradient(ellipse at 96% 26%, rgb(206 215 195 / 42%), transparent 32rem),
+        linear-gradient(145deg, #f8f3e9, var(--paper) 58%, #f3e9dd);
+      color: var(--ink);
+      font: 16px/1.8 -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans JP", "Noto Sans CJK JP", "Noto Sans CJK TC", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    [lang="zh-Hant"] { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans CJK TC", "Noto Sans TC", sans-serif; }
+    [lang="ja"] { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans JP", "Noto Sans CJK JP", sans-serif; }
+    body::before {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background-image: radial-gradient(rgb(116 91 69 / 10%) .7px, transparent .7px);
+      background-size: 20px 20px;
+      content: "";
+      pointer-events: none;
+    }
+    main {
+      position: relative;
+      width: min(900px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: clamp(24px, 6vw, 64px) 0 56px;
+      z-index: 1;
+    }
+    .skip-link {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      z-index: 5;
+      transform: translateY(-160%);
+      padding: 8px 12px;
+      border-radius: 10px;
+      background: var(--ink);
+      color: white;
+    }
+    .skip-link:focus { transform: translateY(0); }
+    .hero, article {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      background: rgb(255 253 248 / 94%);
+      box-shadow: var(--shadow);
+    }
+    .hero {
+      margin-bottom: 22px;
+      padding: clamp(26px, 6vw, 50px);
+      background: linear-gradient(132deg, #fffdf8 0%, #fffaf2 58%, #f2dfd4 100%);
+    }
+    .hero::after {
+      position: absolute;
+      top: -120px;
+      right: -92px;
+      width: 290px;
+      height: 290px;
+      border: 1px solid rgb(169 99 75 / 12%);
+      border-radius: 50%;
+      background: radial-gradient(circle, rgb(169 99 75 / 10%), rgb(169 99 75 / 2%) 68%, transparent 69%);
+      content: "";
+      pointer-events: none;
+    }
+    .hero > * { position: relative; z-index: 1; }
+    .brand-lockup {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .brand-mark {
+      display: grid;
+      width: 48px;
+      height: 48px;
+      flex: 0 0 48px;
+      place-items: center;
+      border: 2px solid rgb(129 75 56 / 22%);
+      border-radius: 16px;
+      background: var(--accent);
+      box-shadow: 0 7px 16px rgb(129 75 56 / 18%);
+      color: #fffaf2;
+      font-size: 34px;
+      font-weight: 850;
+      line-height: 1;
+    }
+    .brand { color: var(--accent-dark); font-size: 17px; font-weight: 850; letter-spacing: .04em; }
+    .brand-caption {
+      display: block;
+      margin-top: 1px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 750;
+      letter-spacing: .18em;
+    }
+    h1, h2, h3 { line-height: 1.35; }
+    h1 {
+      max-width: 760px;
+      margin: 0 0 14px;
+      font-size: clamp(27px, 5vw, 42px);
+      letter-spacing: -.035em;
+    }
+    .hero-description { max-width: 690px; margin: 0; color: #5d5048; font-size: 16px; }
+    .meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 18px 0 0;
+      padding: 7px 12px;
+      border: 1px solid rgb(116 129 107 / 22%);
+      border-radius: 999px;
+      background: rgb(255 255 255 / 55%);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .meta::before {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--sage);
+      content: "";
+    }
+    .note { margin: 12px 0 0; color: var(--muted); font-size: 13px; }
+    .language-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 22px;
+    }
+    .language-nav a {
+      display: inline-flex;
+      min-height: 42px;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 16px;
+      border: 1px solid rgb(169 99 75 / 20%);
+      border-radius: 999px;
+      background: rgb(255 255 255 / 72%);
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 750;
+      transition: border-color .18s ease, background .18s ease, transform .18s ease;
+    }
+    .language-nav a:hover, .language-nav a:focus-visible {
+      transform: translateY(-1px);
+      border-color: var(--accent);
+      background: white;
+      color: var(--accent-dark);
+    }
+    article {
+      margin-top: 20px;
+      padding: clamp(24px, 5vw, 44px);
+      scroll-margin-top: 20px;
+    }
+    article::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--accent), #d5a17d 52%, #aeb89e);
+      content: "";
+    }
+    h2 { margin: 0 0 18px; color: var(--accent-dark); font-size: clamp(23px, 3.5vw, 29px); }
+    h3 {
+      margin: 30px 0 9px;
+      padding-top: 17px;
+      border-top: 1px solid #eee4d7;
+      color: #59463a;
+      font-size: 17px;
+    }
+    p { margin: 9px 0 15px; }
+    ul { margin: 10px 0 18px; padding: 0; list-style: none; }
+    li { position: relative; margin: 8px 0; padding-left: 24px; }
+    li::before {
+      position: absolute;
+      top: .05em;
+      left: 3px;
+      color: var(--accent);
+      content: "•";
+      font-size: 20px;
+      font-weight: 800;
+    }
+    a { color: var(--accent-dark); text-underline-offset: 3px; }
+    a:hover { color: var(--accent); }
+    a:focus-visible { outline: 3px solid rgb(169 99 75 / 35%); outline-offset: 3px; }
+    footer {
+      padding: 22px 8px 0;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+    footer a { color: inherit; }
+    @media (max-width: 560px) {
+      main { width: min(100% - 22px, 900px); padding-top: 18px; }
+      .hero, article { border-radius: 23px; }
+      .hero { padding: 24px 20px; }
+      .brand-lockup { margin-bottom: 20px; }
+      .brand-mark { width: 42px; height: 42px; flex-basis: 42px; border-radius: 14px; font-size: 30px; }
+      .hero-description { font-size: 14px; }
+      .language-nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; }
+      .language-nav a { padding: 7px 6px; font-size: 13px; }
+      article { padding: 26px 20px; }
+      h3 { font-size: 16px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+    @media print {
+      body { background: white; font-size: 13px; line-height: 1.7; }
+      body::before, .language-nav, .skip-link, .note { display: none; }
+      main { width: 100%; padding: 0; }
+      .hero, article { border-color: #ccc; box-shadow: none; overflow: visible; border-radius: 14px; }
+      .hero { padding: 26px 30px; }
+      article { margin-top: 12px; padding: 26px 30px; }
+      article#ja, article#en { break-before: page; }
+      article::before { display: none; }
+      h1 { font-size: 26px; }
+      h2 { font-size: 21px; }
+      h3 { font-size: 14px; margin-top: 18px; padding-top: 12px; break-after: avoid; }
+      p, li { orphans: 3; widows: 3; }
+      a { text-decoration: none; color: var(--accent-dark); }
+      footer { padding-top: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="skip-link" href="#ja">本文へ移動</a>
+    <header class="hero">
+      <div class="brand-lockup">
+        <div class="brand-mark" aria-hidden="true">?</div>
+        <div>
+          <div class="brand" lang="en">Atoikura</div>
+          <span class="brand-caption" lang="en">APP PRIVACY</span>
+        </div>
+      </div>
+      <h1>隱私權政策 / プライバシーポリシー / Privacy Policy</h1>
+      <p class="hero-description" lang="ja">「あといくら？ (Atoikura？)」iPhoneアプリのプライバシーポリシーです。日本語・繁體中文・Englishでご確認いただけます。</p>
+      <p class="meta"><time datetime="2026-10-21">制定日 / 生效日期 / Effective date · 2026-10-21</time></p>
+      <p class="note" lang="ja">言語を選ぶと該当箇所へ移動します。</p>
+      <nav class="language-nav" aria-label="プライバシーポリシーの言語">
+        <a href="#zh">中文</a>
+        <a href="#ja">日本語</a>
+        <a href="#en">English</a>
+      </nav>
+    </header>
+
+    <article id="zh" lang="zh-Hant">
+      <h2>隱私權政策</h2>
+      <p>本政策說明「あといくら？ (Atoikura？)」（以下稱「本 App」）如何處理資料。本政策依目前版本的實際功能撰寫；若未來功能或資料處理方式改變，我們會更新本政策。</p>
+
+      <h3>1. 開發者與聯絡方式</h3>
+      <p>開發者／營運者：SHIH KUANYU<br>
+      隱私權聯絡信箱：shihkuanyu7915@gmail.com</p>
+
+      <h3>2. 本 App 會處理哪些資料</h3>
+      <p>本 App 是手動輸入的個人預算與支出管理工具，不會連結銀行帳戶，也不會要求銀行登入資料。使用者輸入或選擇的內容可能包括（購買開發者小費時，亦會處理完成交易所需的購買資料）：</p>
+      <ul>
+        <li>每月收入、儲蓄目標、結轉金額及固定支出名稱與金額；</li>
+        <li>收入與支出紀錄，例如金額、類別、備註及日期；</li>
+        <li>語言、貨幣、主題、動物夥伴名稱、音效等偏好；</li>
+        <li>本 App 在裝置上產生的手紙、閱讀狀態及手紙回覆選項。</li>
+      </ul>
+      <p>請勿在備註或自訂名稱中輸入銀行帳號、信用卡號、密碼或其他不必要的敏感資料。</p>
+
+      <h3>3. 資料儲存與傳輸</h3>
+      <p>上述預算、交易及偏好資料由本 App 保存在使用者的裝置上，用於顯示預算、計算月度收支與儲蓄預估，以及產生 App 內的手紙內容。本 App 沒有開發者帳戶系統或雲端同步功能，也不會把這些資料傳送給開發者。</p>
+      <p>購買開發者小費時，本 App 會透過 Apple App Store 與 RevenueCat 的購買服務處理交易。RevenueCat 會處理商品識別碼、交易狀態與購買歷史，以及其自動產生的匿名 App 使用者 ID，用於載入商品、驗證及管理購買，並提供相關服務分析。Apple 會處理完成付款所需的資料；開發者不會收到完整信用卡號或付款憑證。購買資料不會用於廣告或跨 App 追蹤。</p>
+      <p>本 App 不會自行建立雲端備份；Apple 作業系統可能依照使用者的 iCloud／裝置備份設定備份 App 資料。此類備份由 Apple 的系統服務依其設定與政策處理，並非由本 App 的開發者管理。</p>
+
+      <h3>4. 本機通知</h3>
+      <p>若使用者允許通知，本 App 可在裝置上排程手紙通知。通知時間與內容由本 App 在裝置上依照 App 資料產生，並交由 iOS 通知系統顯示。本 App 目前不會將推播權杖或手紙內容傳送到開發者的推播伺服器。本機通知可在 iPhone 的「設定」中關閉。</p>
+
+      <h3>5. 資料分享</h3>
+      <p>開發者不會出售、出租或分享本 App 保存在裝置上的預算、交易及偏好資料。購買小費時，Apple 與 RevenueCat 會作為購買服務提供者處理交易及購買歷史，以完成和驗證購買；各自的隱私權政策適用於其處理的資料：<a href="https://www.revenuecat.com/privacy">RevenueCat 隱私權政策</a>、<a href="https://www.apple.com/legal/privacy/">Apple 隱私權政策</a>。Apple 也可能依照 iOS 功能與使用者設定處理通知或裝置備份。若使用者主動寄信聯絡開發者，信件中提供的資料會由電子郵件服務處理，並用於回覆該聯絡事項。</p>
+
+      <h3>6. 保存與刪除</h3>
+      <p>預算、紀錄、手紙及偏好設定會保留在裝置上，直到使用者在 App 的「設定」中執行「初期化／刪除所有資料」，或移除 App。初期化或移除 App 不會刪除 Apple 或 RevenueCat 保存的購買紀錄；這些紀錄依其政策及適用的管理方式處理。如果裝置或 iCloud 備份中仍有本機資料副本，請依照 Apple 提供的備份管理方式處理。</p>
+
+      <h3>7. 安全</h3>
+      <p>預算及交易記錄儲存在使用者自己的裝置上。本 App 沒有額外的帳戶登入或 App 自行管理的雲端資料庫，也沒有對這些本機資料另行實作 App 層級加密。付款資料由 Apple 的購買系統處理，不會由本 App 收集或保存；購買交易資料由 Apple 與 RevenueCat 依前述用途處理。請妥善保管裝置、設定螢幕鎖定，並自行管理裝置備份。</p>
+
+      <h3>8. 政策更新與聯絡</h3>
+      <p>本政策如有重大變更，會更新本頁內容及生效日期。如對本政策有疑問，請聯絡：shihkuanyu7915@gmail.com。</p>
+    </article>
+
+    <article id="ja" lang="ja">
+      <h2>プライバシーポリシー</h2>
+      <p>本ポリシーは、「あといくら？ (Atoikura？)」（以下「本アプリ」）におけるデータの取扱いを説明するものです。現在のアプリの機能に基づいて作成しており、機能や取扱いが変わった場合は内容を更新します。</p>
+
+      <h3>1. 開発者・お問い合わせ先</h3>
+      <p>開発者／運営者：SHIH KUANYU<br>
+      プライバシーに関する連絡先：shihkuanyu7915@gmail.com</p>
+
+      <h3>2. 取り扱うデータ</h3>
+      <p>本アプリは、手入力で家計を管理するツールです。銀行口座との連携はなく、銀行のログイン情報も求めません。利用者が入力または選択した情報を取り扱います。開発者応援チップを購入する場合は、購入処理に必要な情報も取り扱います。</p>
+      <ul>
+        <li>月ごとの収入、貯蓄目標、繰越額、固定費の名称と金額</li>
+        <li>収入・支出の金額、分類、メモ、日付などの記録</li>
+        <li>言語、通貨、テーマ、動物の仲間の名前、効果音などの設定</li>
+        <li>アプリ内で作成する手紙、既読状態、手紙への返信選択</li>
+      </ul>
+      <p>メモや自由入力欄には、銀行口座番号、カード番号、パスワードなど、不要な機密情報を入力しないでください。</p>
+
+      <h3>3. 保存と送信</h3>
+      <p>予算、取引記録、設定は、予算表示、月ごとの収支・貯蓄見込みの計算、アプリ内の手紙作成のため、利用者の端末内に保存されます。本アプリには開発者のアカウント機能やクラウド同期機能はなく、これらのデータを開発者へ送信しません。</p>
+      <p>開発者応援チップの購入時は、Apple App StoreとRevenueCatの購入サービスを利用します。商品識別子、購入状態・購入履歴、RevenueCatが自動生成する匿名のアプリ利用者IDなどが、商品表示、取引の検証・管理、関連するサービス分析のために処理されます。支払いに必要な情報はAppleが処理し、開発者がカード番号や決済情報を受け取ることはありません。購入情報を広告やアプリ間トラッキングには利用しません。</p>
+      <p>本アプリ独自のクラウドバックアップは行いません。iOSの設定によっては、AppleのiCloudまたは端末バックアップにアプリデータが含まれる場合があります。これらのバックアップはAppleのシステムサービスとして、利用者の設定とAppleのポリシーに基づいて処理されます。</p>
+
+      <h3>4. ローカル通知</h3>
+      <p>通知を許可した場合、本アプリは端末上で手紙の通知を予約できます。通知の時刻と内容はアプリのデータを使って端末内で作成され、iOSの通知機能から表示されます。現在のバージョンでは、プッシュ通知トークンや手紙の内容を開発者のプッシュ通知サーバーへ送信しません。通知はiPhoneの「設定」からオフにできます。</p>
+
+      <h3>5. 第三者への提供</h3>
+      <p>開発者は、端末内に保存された予算、取引、設定データを販売、貸与、共有しません。チップ購入時はAppleとRevenueCatが購入サービス提供者として取引情報と購入履歴を処理し、購入の完了・検証に利用します。各社が処理するデータには、それぞれのプライバシーポリシーが適用されます（<a href="https://www.revenuecat.com/privacy">RevenueCat</a>、<a href="https://www.apple.com/legal/privacy/">Apple</a>）。AppleはiOSの設定に応じて通知や端末バックアップも処理する場合があります。利用者が開発者へメールで問い合わせた場合、メールに記載された情報はメールサービスによって処理され、問い合わせへの回答に利用されます。</p>
+
+      <h3>6. 保存期間と削除</h3>
+      <p>予算、記録、手紙、設定は、アプリの「設定」から「初期化／すべてのデータを削除」を実行するか、アプリを削除するまで端末内に保存されます。初期化やアプリの削除では、AppleまたはRevenueCatが保持する購入記録は削除されません。これらの記録は各社の方針と利用可能な管理方法に従って取り扱われます。端末やiCloudのバックアップに残った端末内データは、Appleのバックアップ管理機能から管理してください。</p>
+
+      <h3>7. セキュリティ</h3>
+      <p>予算や取引記録は利用者の端末内に保存されます。本アプリにはアカウントログインや開発者が管理するクラウドデータベースはなく、これらの端末内データに対するアプリ独自の暗号化も実装していません。支払い情報はAppleの購入システムで処理され、本アプリがカード番号や決済情報を収集・保存することはありません。購入取引情報は前述のとおりAppleとRevenueCatが処理します。端末を適切に管理し、画面ロックを設定し、バックアップを利用者自身で管理してください。</p>
+
+      <h3>8. 改定・お問い合わせ</h3>
+      <p>重要な変更がある場合は、本ページと制定日を更新します。本ポリシーに関するお問い合わせ先：shihkuanyu7915@gmail.com。</p>
+    </article>
+
+    <article id="en" lang="en">
+      <h2>Privacy Policy</h2>
+      <p>This policy explains how “あといくら？ (Atoikura？)” (the “App”) handles information. It describes the App as it currently works. We will update this policy if the App’s features or data practices change.</p>
+
+      <h3>1. Developer and contact</h3>
+      <p>Developer/operator: SHIH KUANYU<br>
+      Privacy contact: shihkuanyu7915@gmail.com</p>
+
+      <h3>2. Information handled by the App</h3>
+      <p>The App is a manually entered budgeting tool. It does not connect to bank accounts or ask for banking login credentials. It handles information you enter or choose. If you purchase a developer-support tip, it also processes the information needed to complete that purchase.</p>
+      <ul>
+        <li>Monthly income, savings goals, carryover amounts, and fixed-expense names and amounts;</li>
+        <li>Income and expense records, including amounts, categories, notes, and dates;</li>
+        <li>Preferences such as language, currency, theme, companion name, and sound settings; and</li>
+        <li>Letters created in the App, their read status, and selected letter replies.</li>
+      </ul>
+      <p>Please do not enter bank account numbers, card numbers, passwords, or other unnecessary sensitive information in notes or custom fields.</p>
+
+      <h3>3. Storage and transmission</h3>
+      <p>Your budget, transaction, and preference data is stored on your device to display budgets, calculate monthly spending and savings estimates, and create in-app letters. The App has no developer-operated account system or cloud sync, and does not send this information to the developer.</p>
+      <p>When you purchase a developer-support tip, the App uses Apple’s App Store and RevenueCat’s purchase service. RevenueCat processes purchase details such as product identifiers, transaction status and purchase history, along with an anonymous App User ID it generates, to display products, validate and manage purchases, and provide related service analytics. Apple processes the information needed to complete payment. The developer does not receive full card numbers or payment credentials. Purchase information is not used for advertising or cross-app tracking.</p>
+      <p>The App does not create its own cloud backup. Depending on your iOS settings, Apple may include App data in iCloud or device backups. Those backups are handled by Apple’s system services according to your settings and Apple’s policies, not by the App developer.</p>
+
+      <h3>4. Local notifications</h3>
+      <p>If you allow notifications, the App can schedule letter notifications on your device. Their timing and content are generated on the device from App data and displayed by iOS. The current version does not send push tokens or letter content to a developer-operated push server. You can turn notifications off in your iPhone settings.</p>
+
+      <h3>5. Sharing</h3>
+      <p>The developer does not sell, rent, or share budget, transaction, or preference data stored on your device. When you buy a tip, Apple and RevenueCat process transaction information and purchase history as purchase-service providers to complete and validate the purchase. Their respective privacy policies apply to the information they process: <a href="https://www.revenuecat.com/privacy">RevenueCat Privacy Policy</a> and <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>. Apple may also process notifications or device backups according to your iOS settings. If you email the developer, your email service processes the information in your message so the developer can respond.</p>
+
+      <h3>6. Retention and deletion</h3>
+      <p>Budgets, records, letters, and preferences remain on your device until you use “Initialize/Delete all data” in the App’s Settings or remove the App. Resetting or removing the App does not delete purchase records held by Apple or RevenueCat; those records are handled under their policies and available account controls. Manage any local copies in device or iCloud backups using Apple’s backup controls.</p>
+
+      <h3>7. Security</h3>
+      <p>Budgets and transaction records are stored on your device. The App has no account login or developer-operated cloud database, and it does not implement additional app-level encryption for this local information. Payment information is handled by Apple’s purchase system; the App does not collect or store card numbers or payment credentials. Apple and RevenueCat process purchase transaction information as described above. Please secure your device, use a screen lock, and manage your backups carefully.</p>
+
+      <h3>8. Changes and contact</h3>
+      <p>We will update this page and its effective date if we make material changes. For privacy questions, contact: shihkuanyu7915@gmail.com.</p>
+    </article>
+
+    <footer>
+      Atoikura · This policy describes the current app implementation and may be updated when its data practices change.
+    </footer>
+  </main>
+</body>
+</html>
